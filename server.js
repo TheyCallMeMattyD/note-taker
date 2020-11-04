@@ -1,91 +1,28 @@
 // Dependencies
-const express = require("express");
-const path = require("path");
-const fs = require("fs");
-const uuid = require("uuid");
+const express = require('express');
+// const path = require('path');
+// const fs = require('fs');
+const PORT = process.env.PORT || 8000;
+
+//Testing, not really needed here
+const dbJson = require('./db/db.json')
 
 // Sets up the Express App
 const app = express();
-const PORT = process.env.PORT || 8080;
-const mainDir = path.join(__dirname, "/public");
 
-// Sets up the Express app to handle data parsing
-app.use(express.static("public"));
+//Accesses public file mainly for proper CSS loading
+app.use(express.static(__dirname + '/public'));
+app.use(express.static('./'));
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Routes to HTML Files
-app.get("/", function(req, res) {
-    res.sendFile(path.join(mainDir, "index.html"));
-});
+//Require the Routes.js files in order to communicate when to generate api routes and html files
+require("./apiRoutes")(app);
+require("./htmlRoutes")(app);
 
-app.get("/notes", function(req, res) {
-    res.sendFile(path.join(mainDir, "notes.html"));
-});
-
-// Routes to GET, POST and DELETE notes 
-app.get("/api/notes", function(req, res) {
-    let savedNotes = require("./db/db.json");
-    res.json(savedNotes);
-});
-
-app.post("/api/notes", function(req, res) {
-    let savedNotes = require("./db/db.json");
-
-    console.log(savedNotes);
-
-    // User input for new note object
-    let newNote = req.body;
-    console.log(newNote);
-
-    // Adds unique id to saved notes
-    newNote.id = uuid();
-
-    savedNotes.push(newNote);
-
-    savedNotes = JSON.stringify(savedNotes);
-
-    // create writeFile function to save new notes  
-    fs.writeFile("./db/db.json", savedNotes, "utf8", (err) => {
-        if (err) throw err;
-        console.log("New Note written to file");
-
-        res.json(JSON.parse(savedNotes));
-    });
-
-});
-
-app.delete("/api/notes/:id", function(req, res) {
-    let id = req.params.id;
-    console.log(id);
-
-    let savedNotes = require("./db/db.json");
-
-    for (let i = 0; i < savedNotes.length; i++) {
-        if (id === savedNotes[i].id) {
-            savedNotes.splice(i, 1);
-            console.log(savedNotes);
-        }
-    }
-
-    savedNotes = JSON.stringify(savedNotes);
-
-    // create writeFile function to save new array of saved notes  
-    fs.writeFile("./db/db.json", savedNotes, "utf8", (err) => {
-        if (err) throw err;
-        console.log("Note deleted from file");
-    });
-
-    res.send(JSON.parse(savedNotes));
-
-});
-
-// Route to home page if any other route entered
-app.get("*", function(req, res) {
-    res.sendFile(path.join(mainDir, "index.html"));
-});
 
 // Starts the server to begin listening
 app.listen(PORT, function() {
-    console.log(`App is listening on http://localhost:${PORT}`);
+    console.log("App listening on PORT " + PORT);
 });
