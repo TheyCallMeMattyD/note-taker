@@ -16,11 +16,11 @@ app.use(express.json());
 
 // Routes to HTML Files
 app.get("/", function(req, res) {
-    res.sendFile(path.join(mainDir, "public/index.html"));
+    res.sendFile(path.join(mainDir, "index.html"));
 });
 
 app.get("/notes", function(req, res) {
-    res.sendFile(path.join(mainDir, "public/notes.html"));
+    res.sendFile(path.join(mainDir, "notes.html"));
 });
 
 // Routes to GET, POST and DELETE notes 
