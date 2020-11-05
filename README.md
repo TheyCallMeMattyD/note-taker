@@ -25,9 +25,10 @@
 >Simply answer each question as they appear and press 'Enter' to proceed to the next question.<br/><br/>  
 >1. To run the employee summary generator, enter 'node app.js' ... then just start answering the questions!
 >2. To view the summary generator results, please navigate to the team.html file, right click, and select 'view in default browser', OR - follow the link here:  
->https://theycallmemattyd.github.io/template-engine-employee-summary/output/team.html  
+>  
+>https://sheltered-garden-97292.herokuapp.com/ 
 >
->![screenShot](https://user-images.githubusercontent.com/66084799/97936241-e6163d00-1d48-11eb-8af5-ae04a5a1b736.png)
+
 
 
 ## License
@@ -39,8 +40,8 @@
 >Please make sure to update tests as appropriate.
 
 ## Tests
->### Here's a GIF of the generator being executed:  
->![Screen-Recording-2020-11-02-at-8](https://user-images.githubusercontent.com/66084799/97936150-ae0efa00-1d48-11eb-9051-7ebc0536fd1a.gif)
+>### Here's a screenshot of the homepage: 
+>![appMain](https://user-images.githubusercontent.com/66084799/98290431-aa14ef00-1f77-11eb-9a0d-e715b4c2dd74.png)
 
 >### Here's a screenshot of the test validations being executed.
 >![tests](https://user-images.githubusercontent.com/66084799/97935135-a9951200-1d45-11eb-916e-0350a17d2765.png)  
