@@ -3,7 +3,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/theycallmemattyd/note-taker?style=for-the-badge)  
 
 
-# Online Note-Taker app  - Deployed via Heroku. 
+# Online Note-Taker app - Deployed via Heroku. 
 
 ## Description
 >Online note-taker that allows you to add, delete, and edit notes.  
