@@ -22,14 +22,11 @@
 >1. No installation necessary for the user. All app processes are done via CLI using "express", "path", and "fs" dependencies with NPM.  
   
 ## Usage
->Simply answer each question as they appear and press 'Enter' to proceed to the next question.<br/><br/>  
->1. To run the employee summary generator, enter 'node app.js' ... then just start answering the questions!
->2. To view the summary generator results, please navigate to the team.html file, right click, and select 'view in default browser', OR - follow the link here:  
->  
->https://sheltered-garden-97292.herokuapp.com/ 
->
+>Access the website of the deployed application here:  
+>https://sheltered-garden-97292.herokuapp.com/  
 
-
+>Usage shoud be self-explanatory... just fill out the fields, then hit the 'save' (disk) icon in the upper right hand corner.  
+>To write a new note you can click on the 'pencil' in the upper right hand corner.  
 
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -43,8 +40,8 @@
 >### Here's a screenshot of the homepage: 
 >![appMain](https://user-images.githubusercontent.com/66084799/98290431-aa14ef00-1f77-11eb-9a0d-e715b4c2dd74.png)
 
->### Here's a screenshot of the test validations being executed.
->![tests](https://user-images.githubusercontent.com/66084799/97935135-a9951200-1d45-11eb-916e-0350a17d2765.png)  
+>### Here's a screenshot of some notes that have been entered:
+>![appAction](https://user-images.githubusercontent.com/66084799/98291002-71294a00-1f78-11eb-8ba8-ac58668a4803.png) 
   
 ## Questions
 >Please direct all questions to:
