@@ -3,10 +3,10 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/theycallmemattyd/note-taker?style=for-the-badge)  
 
 
-# template-engine-employee-summary
+# Online Note-Taker app deployed via Heroku. 
 
 ## Description
->A command-line tool that creates a summary of employees.
+>Online note-taker that allows you to add, delete, and edit notes.  
   
 ## Table of Contents
 >1. [Title](#Title)
@@ -19,14 +19,7 @@
 >8. [Questions?](#Questions?)
   
 ## Installation
->1. Be sure you've installed npm (node project manager) and node.js on your system.  
->2. Ensure the follow dependencies are installed by entering the following code in your terminal:  
->   a. npm i inquirer  
->   b. npm i path  
->   c. npm i fs  
->   d. npm i jest  
->   e. npm i test  
->3. To run the test verifications, from the root directory enter 'npm run test'. 
+>1. No installation necessary for the user. All app processes are done via CLI using "express", "path", and "fs" dependencies with NPM.  
   
 ## Usage
 >Simply answer each question as they appear and press 'Enter' to proceed to the next question.<br/><br/>  
